@@ -23,6 +23,5 @@ class ReverseInteger {
         }
         System.out.println("passed");
         return Integer.parseInt(reversed);
-
     }
 }
