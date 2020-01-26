@@ -1,9 +1,7 @@
 public class Application {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-//        int[] elements = { 1, 2, 3, 1 };
-//        solution.findPeakElement(elements);
-        System.out.println("Reverse: " + solution.reverse(4321));
-        solution.reverse(4321);
+        ReverseInteger reverseInteger = new ReverseInteger();
+        System.out.println("Reverse: " + reverseInteger.reverse(-4321));
+        reverseInteger.reverse(-4321);
     }
 }
