@@ -17,15 +17,20 @@
 class Solution {
     public int reverse(int x) {
 
-        int intAsAbsolute = Math.abs(x);
-        String absoluteAsString = String.valueOf(intAsAbsolute);
+        // int intAsAbsolute = Math.abs(x);
+        String absoluteAsString = String.valueOf(x);
         int length = absoluteAsString.length();
-
+        boolean isNegative = false;
         String reversed = "";
 
         for (int i = (length - 1); i >= 0; i--) {
-            reversed += absoluteAsString.charAt(i);
+            if (absoluteAsString.charAt(i) == "-") {
+                isNegative = true;
+            } else {
+                reversed += absoluteAsString.charAt(i);
+            }
+
         }
-        return Integer.parseInt(reversed);
+        return reversed = isNegative ? Integer.parseInt("-" + reversed) : Integer.parseInt(reversed);
     }
 }
